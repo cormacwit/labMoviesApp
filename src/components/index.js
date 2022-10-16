@@ -12,9 +12,14 @@ import StarRateIcon from "@mui/icons-material/StarRate";
 import IconButton from "@mui/material/IconButton";
 import Grid from "@mui/material/Grid";
 import img from '../../images/film-poster-placeholder.png'
+import MovieDetailsPage from './pages/movieDetailsPage'
 
 export default function MovieCard(props) {
-  const movie = props.movie;
+  const App = () => {
+    return (
+        <MovieDetailsPage movie={sample} images={images} />
+        );
+  };
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader title={movie.title} />
@@ -52,4 +57,12 @@ export default function MovieCard(props) {
       </CardActions>
     </Card>
   );
+
+  const images = [
+    "/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg",
+    "/v1QQKq8M0fWxMgSdGOX1aCv8qMB.jpg",
+    "/2iGN0aKHJYD0xQydlfuCUAcgNbO.jpg",
+    "/rjBwhsOzHKUw2NIOrE7aMqjfe6s.jpg",
+  ]
+
 }
