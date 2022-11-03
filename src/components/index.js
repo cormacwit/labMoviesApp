@@ -13,6 +13,7 @@ import IconButton from "@mui/material/IconButton";
 import Grid from "@mui/material/Grid";
 import img from '../../images/film-poster-placeholder.png'
 import MovieDetailsPage from './pages/movieDetailsPage'
+import MovieReviewPage from "./pages/movieReviewPage";
 
 export default function MovieCard(props) {
   const App = () => {
@@ -46,6 +47,10 @@ export default function MovieCard(props) {
             </Typography>
           </Grid>
         </Grid>
+        <Routes>
+    <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
+    . . . other routes . . .
+</Routes>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites" onClick={null}>
@@ -56,6 +61,7 @@ export default function MovieCard(props) {
         </Button>
       </CardActions>
     </Card>
+    
   );
 
   const images = [
@@ -65,4 +71,5 @@ export default function MovieCard(props) {
     "/rjBwhsOzHKUw2NIOrE7aMqjfe6s.jpg",
   ]
 
+  
 }
