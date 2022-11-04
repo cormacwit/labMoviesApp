@@ -15,6 +15,7 @@ import img from '../../images/film-poster-placeholder.png';
 import { Link } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import { MoviesContext } from "../../contexts/moviesContext";
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd'
 
 export default function MovieCard({ movie, action }) {
   const { favourites, addToFavourites } = useContext(MoviesContext);
@@ -76,6 +77,9 @@ export default function MovieCard({ movie, action }) {
       <Button variant="outlined" size="medium" color="primary">
         More Info ...
       </Button>
+      <PlaylistAddIcon>
+        Add playlist
+        </PlaylistAddIcon>
     </Link>
   </CardActions>
     </Card>
