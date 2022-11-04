@@ -14,6 +14,15 @@ const MoviesContextProvider = (props) => {
     setFavourites(newFavourites);
   };
 
+
+  const addTomustwatch = (movie) => {
+    let newmustwatch = [...mustwatch];
+    if (!mustwatch.includes(movie.id)) {
+      newmustwatch.push(movie.id);
+    }
+    setmustwatch(newmustwatch);
+  };
+
   // We will use this function in a later section
   const removeFromFavourites = (movie) => {
     setFavourites( favourites.filter(
